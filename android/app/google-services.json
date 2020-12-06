@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "82441722994",
+    "project_id": "cruz-brew-crew-71834",
+    "storage_bucket": "cruz-brew-crew-71834.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82441722994:android:e54cd19cdd390b7a78f6eb",
+        "android_client_info": {
+          "package_name": "com.cruz.brew_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "82441722994-b720eooehb7o637buof9vumj71n0sv2r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZY5aL12Z8YARf93kN6hhjW7-jQiw4UIo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "82441722994-b720eooehb7o637buof9vumj71n0sv2r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
