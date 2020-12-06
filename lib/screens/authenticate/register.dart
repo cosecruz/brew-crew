@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:brew_app/services/auth.dart';
 
-class SignIn extends StatefulWidget {
+class Register extends StatefulWidget {
   final Function toggleView;
-  SignIn({this.toggleView});
+  Register({this.toggleView});
   @override
-  _SignInState createState() => _SignInState();
+  _RegisterState createState() => _RegisterState();
 }
 
-class _SignInState extends State<SignIn> {
+class _RegisterState extends State<Register> {
   final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
 
@@ -24,11 +24,11 @@ class _SignInState extends State<SignIn> {
       appBar: AppBar(
         backgroundColor: Colors.brown[400],
         elevation: 0.0,
-        title: Text('Sign in to Cruz Brew Crew'),
+        title: Text('Sign up to Cruz Brew Crew'),
         actions: <Widget>[
           FlatButton.icon(
             icon: Icon(Icons.person),
-            label: Text('Register'),
+            label: Text('Sign in'),
             onPressed: () {
               widget.toggleView();
             },
@@ -59,18 +59,15 @@ class _SignInState extends State<SignIn> {
               RaisedButton(
                   color: Colors.pink[400],
                   child: Text(
-                    'Sign in',
+                    'Register',
                     style: TextStyle(color: Colors.white),
                   ),
                   onPressed: () async {
                     if (_formKey.currentState.validate()) {
-                      dynamic result = await _auth.signInwithemailandpassword(
+                      dynamic result = await _auth.registerwithemailandpassword(
                           email, password);
-                      //dynamic result = await _auth.registerwithemailandpassword(
-                      //  email, password);
                       if (result == null) {
-                        setState(() =>
-                            error = 'could not sign in with those credentials');
+                        setState(() => error = 'please apply a valid email');
                       }
                     }
                   }),
